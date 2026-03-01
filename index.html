@@ -10,19 +10,31 @@
   </head>
   <body>
     <main class="landing">
-      <img class="logo" src="./src/logo.png" alt="Mercado casino" />
-      <img class="bg-text" src="./src/bg_text.png" alt="" aria-hidden="true" />
+      <section class="screen screen--grid" data-screen="grid">
+        <img class="logo" src="./src/logo.png" alt="Mercado casino" />
+        <img class="bg-text" src="./src/bg_text.png" alt="" aria-hidden="true" />
 
-      <h1 class="title">SELECCIONÁ UNA CAJA PARA OBTENER TU RECOMPENSA</h1>
+        <h1 class="title">SELECCIONÁ UNA CAJA PARA OBTENER TU RECOMPENSA</h1>
 
-      <section class="boxes" aria-label="Интерактивные коробочки">
-        <button class="box box--1" type="button" aria-label="Открыть коробочку"></button>
-        <button class="box box--2" type="button" aria-label="Открыть коробочку"></button>
-        <button class="box box--3" type="button" aria-label="Открыть коробочку"></button>
-        <button class="box box--4" type="button" aria-label="Открыть коробочку"></button>
-        <button class="box box--5" type="button" aria-label="Открыть коробочку"></button>
-        <button class="box box--6" type="button" aria-label="Открыть коробочку"></button>
+        <section class="boxes" aria-label="Интерактивные коробочки">
+          <button class="box box--1" type="button" aria-label="Открыть коробочку"></button>
+          <button class="box box--2" type="button" aria-label="Открыть коробочку"></button>
+          <button class="box box--3" type="button" aria-label="Открыть коробочку"></button>
+          <button class="box box--4" type="button" aria-label="Открыть коробочку"></button>
+          <button class="box box--5" type="button" aria-label="Открыть коробочку"></button>
+          <button class="box box--6" type="button" aria-label="Открыть коробочку"></button>
+        </section>
       </section>
+
+      <section class="screen screen--bonus" data-screen="bonus" aria-hidden="true">
+        <img class="logo" src="./src/logo.png" alt="Mercado casino" />
+        <img class="bg-text" src="./src/bg_text.png" alt="" aria-hidden="true" />
+        <img class="open-box" src="./src/open_box.png" alt="Открытая коробка Mercado" />
+        <h2 class="bonus-title">TU BONO<br />PERSONAL</h2>
+        <button class="claim-button" type="button">¡RECLAMÁ TU BONO!</button>
+      </section>
+
+      <span class="reveal-wave" aria-hidden="true"></span>
     </main>
   </body>
 </html>
