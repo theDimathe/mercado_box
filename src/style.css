@@ -55,7 +55,7 @@ body {
   width: clamp(88px, 11vw, 150px);
   aspect-ratio: 1 / 1;
   border: none;
-  background: url('/src/box.png') center / contain no-repeat;
+  background: url('./box.png') center / contain no-repeat;
   cursor: pointer;
   filter: drop-shadow(0 12px 18px rgba(0, 0, 0, 0.42));
   transition: transform 0.22s ease, filter 0.22s ease;
