@@ -1,9 +1,8 @@
 import { cpSync, mkdirSync, rmSync } from 'node:fs';
 
 rmSync('dist', { recursive: true, force: true });
-mkdirSync('dist/src', { recursive: true });
+mkdirSync('dist', { recursive: true });
 cpSync('index.html', 'dist/index.html');
-cpSync('src/style.css', 'dist/src/style.css');
-cpSync('src/main.js', 'dist/src/main.js');
+cpSync('src', 'dist/src', { recursive: true });
 
 console.log('Build completed: dist/');
