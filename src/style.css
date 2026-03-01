@@ -40,6 +40,33 @@ body {
     z-index: 2;
 }
 
+.screen--grid .logo,
+.screen--grid .bg-text,
+.screen--grid .title,
+.screen--grid .box {
+  animation-duration: 4.6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.screen--grid .logo,
+.screen--grid .title {
+  animation-name: float-drift;
+}
+
+.screen--grid .bg-text,
+.screen--grid .box {
+  animation-name: float-drift-alt;
+}
+
+.screen--grid .box:nth-child(2n) {
+  animation-delay: -1.2s;
+}
+
+.screen--grid .box:nth-child(3n) {
+  animation-delay: -2.2s;
+}
+
 .bg-text {
     position: absolute;
     width: 100%;
@@ -168,12 +195,31 @@ body {
   transform: translateY(0) scale(1);
 }
 
-.open-box {
+.bonus-visual {
+  position: relative;
   width: min(560px, 92vw);
   margin: clamp(16px, 4vw, 28px) auto clamp(16px, 4vw, 24px);
+  display: grid;
+  place-items: center;
+}
+
+.open-box,
+.light-ring {
+  grid-area: 1 / 1;
+}
+
+.open-box {
+  width: 100%;
   position: relative;
   z-index: 2;
   scale: 142%;
+}
+
+.light-ring {
+  width: 78%;
+  z-index: 1;
+  transform-origin: center;
+  animation: light-spin 5s linear infinite;
 }
 
 .bonus-title {
@@ -231,6 +277,41 @@ body {
 
 .reveal-wave.is-active {
   animation: wave 0.36s cubic-bezier(0.18, 0.9, 0.2, 1) forwards;
+}
+
+
+@keyframes light-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes float-drift {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(-0.8deg);
+  }
+  50% {
+    transform: translate3d(0, -7px, 0) rotate(0.8deg);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) rotate(-0.8deg);
+  }
+}
+
+@keyframes float-drift-alt {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0.9deg);
+  }
+  50% {
+    transform: translate3d(0, -6px, 0) rotate(-0.6deg);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0.9deg);
+  }
 }
 
 @keyframes twinkle {
@@ -300,10 +381,17 @@ body {
     inset: clamp(20px, 6vw, 28px) 14px calc(20px + env(safe-area-inset-bottom));
   }
 
-  .open-box {
+  .bonus-visual {
     width: min(500px, 88vw);
     margin: 0 auto 12px;
+  }
+
+  .open-box {
     scale: 1.4;
+  }
+
+  .light-ring {
+    width: 80%;
   }
 
   .bonus-title {
@@ -331,9 +419,12 @@ body {
     gap: 10px 8px;
   }
 
-  .open-box {
+  .bonus-visual {
     width: min(322px, 58vw);
     margin-bottom: 6px;
+  }
+
+  .open-box {
     scale: 142%;
   }
 
