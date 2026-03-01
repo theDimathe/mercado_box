@@ -331,9 +331,10 @@ body {
   }
 
   .open-box {
-    width: min(430px, 82vw);
+    width: min(220px, 42vw);
     scale: 1;
     margin-bottom: 6px;
+    scale: 142%;
   }
 
   .bonus-title {
