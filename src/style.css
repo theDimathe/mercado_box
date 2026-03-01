@@ -337,7 +337,7 @@ body {
   }
 
   .bonus-title {
-    font-size: clamp(24px, 8.2vw, 32px);
+    font-size: 13vw;
     margin-bottom: 10px;
   }
 
