@@ -35,9 +35,9 @@ body {
   position: absolute;
   width: min(700px, 92vw);
   left: 50%;
-  top: clamp(90px, 14vw, 130px);
+  top: clamp(78px, 12vw, 118px);
   transform: translateX(-50%);
-  opacity: 0.28;
+  opacity: 0.22;
   z-index: 0;
   pointer-events: none;
 }
@@ -64,6 +64,20 @@ body {
   gap: clamp(54px, 7vw, 84px) clamp(32px, 8vw, 90px);
 }
 
+.boxes::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -3%;
+  width: min(84vw, 660px);
+  height: 150px;
+  transform: translateX(-50%);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.72) 0%, rgba(255, 255, 255, 0) 72%);
+  filter: blur(16px);
+  z-index: -1;
+  pointer-events: none;
+}
+
 .box {
   position: relative;
   display: block;
@@ -78,6 +92,20 @@ body {
   background: url('./box.png') center / contain no-repeat;
   cursor: pointer;
   transition: transform 0.2s ease;
+}
+
+.box::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 56%;
+  width: 88%;
+  height: 48%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.66) 0%, rgba(255, 255, 255, 0) 72%);
+  filter: blur(14px);
+  z-index: -1;
+  pointer-events: none;
 }
 
 .box:hover {
@@ -122,11 +150,12 @@ body {
   }
 
   .boxes {
-    grid-template-columns: 1fr;
-    gap: 26px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px 14px;
   }
 
   .box {
-    max-width: 290px;
+    max-width: 100%;
+    min-height: 126px;
   }
 }
