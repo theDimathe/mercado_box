@@ -170,7 +170,7 @@ body {
   margin: clamp(16px, 4vw, 28px) auto clamp(16px, 4vw, 24px);
   position: relative;
   z-index: 2;
-  margin-top: 70px;
+  scale: 142%;
 }
 
 .bonus-title {
