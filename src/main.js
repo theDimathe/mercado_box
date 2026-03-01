@@ -1,28 +1,40 @@
 import './style.css';
 
-const pulseBtn = document.querySelector('#pulseBtn');
-const counter = document.querySelector('#pulseCounter');
-const tiltCard = document.querySelector('#tiltCard');
+const boxes = [...document.querySelectorAll('.box')];
 
-let clicks = 0;
+const spawnSparkle = (box) => {
+  const sparkle = document.createElement('span');
+  sparkle.className = 'sparkle';
 
-pulseBtn?.addEventListener('click', () => {
-  clicks += 1;
-  counter.textContent = `Кликов: ${clicks}`;
-  pulseBtn.animate(
-    [
-      { transform: 'scale(1)' },
-      { transform: 'scale(1.06)' },
-      { transform: 'scale(1)' }
-    ],
-    { duration: 220, easing: 'ease-out' }
-  );
-});
+  const x = 8 + Math.random() * 84;
+  const y = 8 + Math.random() * 84;
 
-window.addEventListener('mousemove', (event) => {
-  if (!tiltCard) return;
-  const { innerWidth, innerHeight } = window;
-  const rotateY = ((event.clientX / innerWidth) - 0.5) * 8;
-  const rotateX = ((event.clientY / innerHeight) - 0.5) * -8;
-  tiltCard.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+  sparkle.style.left = `${x}%`;
+  sparkle.style.top = `${y}%`;
+  sparkle.style.animationDuration = `${700 + Math.random() * 700}ms`;
+
+  box.appendChild(sparkle);
+  setTimeout(() => sparkle.remove(), 1500);
+};
+
+boxes.forEach((box) => {
+  box.addEventListener('click', () => {
+    box.animate(
+      [
+        { transform: 'translateY(0) scale(1)' },
+        { transform: 'translateY(-4px) scale(1.09)' },
+        { transform: 'translateY(0) scale(1)' }
+      ],
+      { duration: 260, easing: 'ease-out' }
+    );
+  });
+
+  const pulse = () => {
+    if (Math.random() > 0.6) {
+      spawnSparkle(box);
+    }
+  };
+
+  const interval = 500 + Math.random() * 1100;
+  setInterval(pulse, interval);
 });
