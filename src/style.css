@@ -100,7 +100,10 @@ body {
   justify-content: center;
   gap: clamp(54px, 7vw, 84px) clamp(32px, 8vw, 90px);
 }
-
+.img.light-ring {
+    scale: 4;
+    margin-top: 25%;
+}
 .boxes::after {
   content: '';
   position: absolute;
