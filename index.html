@@ -3,55 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Интерактивный лендинг</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <title>Mercado Box</title>
     <script type="module" src="./src/main.js"></script>
   </head>
   <body>
-    <div class="gradient-bg"></div>
-    <header class="header container">
-      <span class="logo">Mercado Box</span>
-      <nav>
-        <a href="#features">Функции</a>
-        <a href="#cta">Старт</a>
-      </nav>
-    </header>
+    <main class="landing">
+      <img class="logo" src="/src/logo.png" alt="Mercado Box" />
+      <img class="bg-text" src="/src/bg_text.png" alt="" aria-hidden="true" />
 
-    <main>
-      <section class="hero container">
-        <div>
-          <p class="eyebrow">Лендинг за 5 минут</p>
-          <h1>Готовое окружение под HTML, CSS и JS</h1>
-          <p class="subtitle">Запускай dev-сервер, редактируй блоки и сразу смотри результат с анимациями и интерактивом.</p>
-          <button id="pulseBtn" class="cta-button">Нажми меня</button>
-          <p id="pulseCounter" class="counter">Кликов: 0</p>
-        </div>
-        <div class="card" id="tiltCard">
-          <h2>Live preview</h2>
-          <p>Карточка реагирует на курсор. Отлично подходит для hero-блока интерактивного лендинга.</p>
-        </div>
-      </section>
-
-      <section id="features" class="features container">
-        <article>
-          <h3>Быстрый старт</h3>
-          <p>Нужен только Node.js. Команда <code>npm run dev</code> поднимет локальный сервер.</p>
-        </article>
-        <article>
-          <h3>Современная сборка</h3>
-          <p>Vite обеспечивает горячую перезагрузку и production-сборку одной командой.</p>
-        </article>
-        <article>
-          <h3>Чистая структура</h3>
-          <p>Разделены HTML, CSS и JS — удобно масштабировать лендинг дальше.</p>
-        </article>
-      </section>
-
-      <section id="cta" class="container final-cta">
-        <h2>Готово к разработке</h2>
-        <p>Изменяй контент, добавляй секции и публикуй.</p>
+      <section class="boxes" aria-label="Интерактивные коробочки">
+        <button class="box box--1" type="button" aria-label="Открыть коробочку"></button>
+        <button class="box box--2" type="button" aria-label="Открыть коробочку"></button>
+        <button class="box box--3" type="button" aria-label="Открыть коробочку"></button>
+        <button class="box box--4" type="button" aria-label="Открыть коробочку"></button>
+        <button class="box box--5" type="button" aria-label="Открыть коробочку"></button>
+        <button class="box box--6" type="button" aria-label="Открыть коробочку"></button>
+        <button class="box box--7" type="button" aria-label="Открыть коробочку"></button>
+        <button class="box box--8" type="button" aria-label="Открыть коробочку"></button>
+        <button class="box box--9" type="button" aria-label="Открыть коробочку"></button>
       </section>
     </main>
   </body>
