@@ -30,23 +30,23 @@ body {
 }
 
 .logo {
-  display: block;
-  width: min(330px, 68vw);
-  margin: 0 auto;
-  position: relative;
-  z-index: 2;
+    display: block;
+    width: min(100px, 24vw);
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
 }
 
 .bg-text {
-  position: absolute;
-  width: min(700px, 92vw);
-  left: 50%;
-  top: clamp(78px, 12vw, 118px);
-  transform: translateX(-50%);
-  opacity: 0.22;
-  z-index: 0;
-  pointer-events: none;
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    top: 10px;
+    transform: translateX(-50%);
+    z-index: 0;
+    pointer-events: none;
 }
+
 
 .title,
 .bonus-title {
