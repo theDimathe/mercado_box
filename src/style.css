@@ -1,0 +1,131 @@
+:root {
+  color-scheme: dark;
+  --bg: #080b14;
+  --text: #e9eeff;
+  --muted: #b5bfd9;
+  --accent: #66d9ef;
+  --accent-2: #8a7dff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  min-height: 100vh;
+}
+
+.gradient-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: radial-gradient(circle at 20% 15%, rgba(102, 217, 239, 0.25), transparent 45%),
+    radial-gradient(circle at 80% 80%, rgba(138, 125, 255, 0.2), transparent 40%);
+}
+
+.container {
+  width: min(1100px, 92vw);
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28px 0;
+}
+
+.logo {
+  font-weight: 800;
+  letter-spacing: 0.4px;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.hero {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  align-items: center;
+  padding: 30px 0 70px;
+}
+
+.eyebrow {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+h1 {
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  margin: 12px 0;
+}
+
+.subtitle {
+  color: var(--muted);
+  max-width: 55ch;
+}
+
+.cta-button {
+  margin-top: 18px;
+  border: none;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  color: #091018;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 12px 22px;
+  cursor: pointer;
+  transition: transform 180ms ease;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+}
+
+.counter {
+  color: var(--muted);
+}
+
+.card {
+  padding: 24px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+  transition: transform 140ms ease-out;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  padding-bottom: 60px;
+}
+
+.features article {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 18px;
+}
+
+.features p,
+.final-cta p {
+  color: var(--muted);
+}
+
+.final-cta {
+  text-align: center;
+  padding-bottom: 80px;
+}
