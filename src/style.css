@@ -192,7 +192,13 @@ body {
   text-shadow: 0 3px 0 rgba(0, 0, 0, 0.22);
   box-shadow: 0 8px 20px rgba(8, 31, 159, 0.3);
   transition: transform 0.16s ease;
-  position: relative;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: max(8px, env(safe-area-inset-bottom));
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto;
   z-index: 2;
 }
 
@@ -211,7 +217,7 @@ body {
   width: var(--size, 10px);
   height: var(--size, 10px);
   border-radius: 50%;
-  background: #fff;
+  background: var(--yellow);
   transform: translate(-50%, -50%) scale(0);
   opacity: 0;
   pointer-events: none;
